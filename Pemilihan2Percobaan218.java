@@ -22,7 +22,7 @@ public class Pemilihan2Percobaan218 {
         member = sc.nextLine();
         System.out.println("--------------------------------------");
 
-        if (member.equals("y")){ //Menggunakan equalsIgnoreCase uuntuk membandingkan string
+        if (member.equals("y")){ 
             diskon = 0.10;
             System.out.println("Besar diskon = 10%");
             if (pilihanMenu == 1) {
@@ -49,7 +49,7 @@ public class Pemilihan2Percobaan218 {
             totalBayar = harga - (harga * diskon);
             System.out.println("Total bayar sebelum diskon QRIS: " + totalBayar);
 
-            // Menghitung diskon QRIS jika applicable
+            // Menghitung diskon QRIS 
             if (jenis_pembayaran.equals("QRIS")) {
                 totalBayar -= 1000;
                 System.out.println("Total bayar setelah diskon QRIS: " + totalBayar);
@@ -58,7 +58,7 @@ public class Pemilihan2Percobaan218 {
             }
         }
 
-        else if (member.equals("n")) { //Menggunakan equalsIqnoreCase untuk membandingkan string
+        else if (member.equals("n")) { 
             if (pilihanMenu == 1) {
             harga = 14000;
                 System.out.println("Harga ricebowl = " + harga);
@@ -83,7 +83,7 @@ public class Pemilihan2Percobaan218 {
             totalBayar = harga - (harga * diskon);
             System.out.println("Total bayar sebelum diskon QRIS: " + totalBayar);
 
-            // Menghitung diskon QRIS jika applicable
+            // Menghitung diskon QRIS 
             if (jenis_pembayaran.equals("QRIS")) {
                 totalBayar -= 1000;
                 System.out.println("Total bayar setelah diskon QRIS: " + totalBayar);
