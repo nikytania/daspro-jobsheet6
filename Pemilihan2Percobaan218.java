@@ -4,9 +4,9 @@ public class Pemilihan2Percobaan218 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        String member;
+        String member, jenis_pembayaran;
         int pilihanMenu, harga=0, jumlahBeli;
-        double diskon=0, totalBayar;
+        double diskon=0, totalBayar=0;
 
         System.out.println("-----------------------");
         System.out.println("==== MENU KAFE JTI ====");
@@ -22,7 +22,7 @@ public class Pemilihan2Percobaan218 {
         member = sc.nextLine();
         System.out.println("--------------------------------------");
 
-        if (member.equalsIgnoreCase("y")){ //Menggunakan equalsIgnoreCase uuntuk membandingkan string
+        if (member.equals("y")){ //Menggunakan equalsIgnoreCase uuntuk membandingkan string
             diskon = 0.10;
             System.out.println("Besar diskon = 10%");
             if (pilihanMenu == 1) {
@@ -41,12 +41,24 @@ public class Pemilihan2Percobaan218 {
                 System.out.println("Masukkan pilihan menu dengan benar");
                 return; //Menghentikan eksekusi lebih lanjut jika pilihan salah 
             }
+            
+            System.out.print("Jenis pembayaran (tunai/QRIS): ");
+            jenis_pembayaran = sc.nextLine();
+
             // Menghitung total bayar setelah diskon
-            totalBayar = harga - (harga*diskon);
-            System.out.println("Total bayar setelah diskon = " + totalBayar);
+            totalBayar = harga - (harga * diskon);
+            System.out.println("Total bayar sebelum diskon QRIS: " + totalBayar);
+
+            // Menghitung diskon QRIS jika applicable
+            if (jenis_pembayaran.equals("QRIS")) {
+                totalBayar -= 1000;
+                System.out.println("Total bayar setelah diskon QRIS: " + totalBayar);
+            } else {
+                System.out.println("Total bayar: " + totalBayar);
+            }
         }
 
-        else if (member.equalsIgnoreCase("n")) {//Menggunakan equalsIqnoreCase untuk membandingkan string
+        else if (member.equals("n")) { //Menggunakan equalsIqnoreCase untuk membandingkan string
             if (pilihanMenu == 1) {
             harga = 14000;
                 System.out.println("Harga ricebowl = " + harga);
@@ -63,12 +75,24 @@ public class Pemilihan2Percobaan218 {
                 System.out.println("Masukkan pilihan menu dengan benar");
                 return; //Menghentikan eksekusi lebih lanjut jika pilihan salah 
             }
-            // Menghitung total bayar setelah diskon
-            System.out.println("Total bayar = " + harga);
 
-        } else {
-            System.out.println("Member tidak valid");
+            System.out.print("Jenis pembayaran (tunai/QRIS): ");
+            jenis_pembayaran = sc.nextLine();
+
+            // Menghitung total bayar setelah diskon
+            totalBayar = harga - (harga * diskon);
+            System.out.println("Total bayar sebelum diskon QRIS: " + totalBayar);
+
+            // Menghitung diskon QRIS jika applicable
+            if (jenis_pembayaran.equals("QRIS")) {
+                totalBayar -= 1000;
+                System.out.println("Total bayar setelah diskon QRIS: " + totalBayar);
+            } else {
+                System.out.println("Total bayar: " + totalBayar);
+            }
         }
+
+        
         System.out.println("---------------------------------------------");
     
         sc.close();
