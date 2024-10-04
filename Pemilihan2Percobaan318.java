@@ -15,9 +15,9 @@ public class Pemilihan2Percobaan318 {
         
         if (kategori.equals("pekerja")) {
             if (penghasilan <= 2000000)
+                pajak = 0.1;
+            else if (penghasilan <= 3000000)
                 pajak = 0.15;
-            else if (penghasilan <= 3500000)
-                pajak = 0.2;
             else
                 pajak = 0.2;
 
