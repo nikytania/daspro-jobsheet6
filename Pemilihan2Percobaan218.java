@@ -39,17 +39,17 @@ public class Pemilihan2Percobaan218 {
 
             }else{
                 System.out.println("Masukkan pilihan menu dengan benar");
-                return; //Menghentikan eksekusi lebih lanjut jika pilihan salah 
+                return; 
             }
             
             System.out.print("Jenis pembayaran (tunai/QRIS): ");
             jenis_pembayaran = sc.nextLine();
 
-            // Menghitung total bayar setelah diskon
+            
             totalBayar = harga - (harga * diskon);
             System.out.println("Total bayar sebelum diskon QRIS: " + totalBayar);
 
-            // Menghitung diskon QRIS 
+             
             if (jenis_pembayaran.equals("QRIS")) {
                 totalBayar -= 1000;
                 System.out.println("Total bayar setelah diskon QRIS: " + totalBayar);
@@ -73,17 +73,17 @@ public class Pemilihan2Percobaan218 {
 
             }else{
                 System.out.println("Masukkan pilihan menu dengan benar");
-                return; //Menghentikan eksekusi lebih lanjut jika pilihan salah 
+                return;  
             }
 
             System.out.print("Jenis pembayaran (tunai/QRIS): ");
             jenis_pembayaran = sc.nextLine();
 
-            // Menghitung total bayar setelah diskon
+            
             totalBayar = harga - (harga * diskon);
             System.out.println("Total bayar sebelum diskon QRIS: " + totalBayar);
 
-            // Menghitung diskon QRIS 
+             
             if (jenis_pembayaran.equals("QRIS")) {
                 totalBayar -= 1000;
                 System.out.println("Total bayar setelah diskon QRIS: " + totalBayar);
